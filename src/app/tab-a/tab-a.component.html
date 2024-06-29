@@ -1,0 +1,24 @@
+<!-- src/app/tab-a/tab-a.component.html -->
+<div>
+    <h2>Dati di TabA</h2>
+    <input type="text" placeholder="Filtra per Campo A1" [(ngModel)]="filter" (keyup)="applyFilter()">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Campo A1</th>
+          <th>Campo A2</th>
+          <th>Campo A3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of filteredRecords">
+          <td>{{ record.id }}</td>
+          <td>{{ record.campoA1 }}</td>
+          <td>{{ record.campoA2 }}</td>
+          <td>{{ record.campoA3 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
